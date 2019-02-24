@@ -1,33 +1,209 @@
 {
     "products": [{
-        "id": 499577,
-        "name": "Ave Classic Sweatshirt",
-        "gender": "mens",
-        "style": "casual",
-        "category": "hoodies & sweatshirts",
-        "colors": [
-            "Black", "Blue", "Red"
-        ],
-        "sizes": [
-            "Small", "Medium", "Large"
-        ],
-        "stock": true,
-        "tags": [
-            "Classic", "Casual", "V-neck", "Loose"
-        ],
-        "short": "Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.",
-        "description": {
-            "heading": "Nunc egestas posuere enim, eu maximus erat posuere eget",
-            "body": "Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis. Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus. Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. Quisque a convallis diam commodo eget diam id, eleifend dictum libero. Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque."
+            "id": 499577,
+            "name": "Ave Classic Sweatshirt",
+            "gender": "mens",
+            "style": "casual",
+            "category": "hoodies & sweatshirts",
+            "price": 107,
+            "discount": {
+                "isDiscounted": true,
+                "discountPrice": 89.99
+            },
+            "colors": [
+                "Black", "Blue", "Red"
+            ],
+            "sizes": [
+                "Small", "Medium", "Large"
+            ],
+            "stock": true,
+            "tags": [
+                "Classic", "Casual", "V-neck", "Loose"
+            ],
+            "short": "Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.",
+            "description": {
+                "heading": "Nunc egestas posuere enim, eu maximus erat posuere eget",
+                "body": "Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis. Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus. Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. Quisque a convallis diam commodo eget diam id, eleifend dictum libero. Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque."
+            },
+            "video": {
+                "hasVideo": true,
+                "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
+            },
+            "images": [
+                "@/assets/images/products/item3.png"
+            ]
         },
-        "video": {
-            "hasVideo": true,
-            "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
+        {
+            "id": 500387,
+            "name": "Ave Marilyn Monroe T-shirt",
+            "gender": "womens",
+            "style": "casual",
+            "category": "t-shirts",
+            "price": 47.50,
+            "discount": {
+                "isDiscounted": false,
+                "discountPrice": 0
+            },
+            "colors": [
+                "White", "Black"
+            ],
+            "sizes": [
+                "Small", "Medium", "Large"
+            ],
+            "stock": true,
+            "tags": [
+                "Classic", "Casual", "Ladies", "Famous"
+            ],
+            "short": "Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.",
+            "description": {
+                "heading": "Nunc egestas posuere enim, eu maximus erat posuere eget",
+                "body": "Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis. Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus. Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. Quisque a convallis diam commodo eget diam id, eleifend dictum libero. Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque."
+            },
+            "video": {
+                "hasVideo": true,
+                "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
+            },
+            "images": [
+                "@/assets/images/products/item2.png"
+            ]
         },
-        "images": [
-            "assets/images/ave-classic-sweatshirt.png"
-        ]
-    }],
+        {
+            "id": 743891,
+            "name": "Ave Illuminati Long-sleeved",
+            "gender": "mens",
+            "style": "casual",
+            "category": "t-shirts",
+            "price": 89.99,
+            "discount": {
+                "isDiscounted": false,
+                "discountPrice": 0
+            },
+            "colors": [
+                "Black", "Yellow"
+            ],
+            "sizes": [
+                "Small", "Medium", "Large"
+            ],
+            "stock": true,
+            "tags": [
+                "Classic", "Casual", "Mens", "long-sleeved"
+            ],
+            "short": "Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.",
+            "description": {
+                "heading": "Nunc egestas posuere enim, eu maximus erat posuere eget",
+                "body": "Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis. Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus. Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. Quisque a convallis diam commodo eget diam id, eleifend dictum libero. Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque."
+            },
+            "video": {
+                "hasVideo": true,
+                "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
+            },
+            "images": [
+                "@/assets/images/products/item1.png"
+            ]
+        },
+        {
+            "id": 129034,
+            "name": "Ave Surfer Sweatshirt",
+            "gender": "mens",
+            "style": "casual",
+            "category": "hoodies & sweatshirts",
+            "price": 69.95,
+            "discount": {
+                "isDiscounted": false,
+                "discountPrice": 0
+            },
+            "colors": [
+                "Blue", "Black"
+            ],
+            "sizes": [
+                "Small", "Medium", "Large"
+            ],
+            "stock": true,
+            "tags": [
+                "Classic", "Casual", "Mens", "long-sleeved"
+            ],
+            "short": "Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.",
+            "description": {
+                "heading": "Nunc egestas posuere enim, eu maximus erat posuere eget",
+                "body": "Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis. Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus. Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. Quisque a convallis diam commodo eget diam id, eleifend dictum libero. Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque."
+            },
+            "video": {
+                "hasVideo": true,
+                "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
+            },
+            "images": [
+                "@/assets/images/products/item4.png"
+            ]
+        },
+        {
+            "id": 937545,
+            "name": "Ave Casual T-shirt",
+            "gender": "womens",
+            "style": "casual",
+            "category": "t-shirts",
+            "price": 29.95,
+            "discount": {
+                "isDiscounted": false,
+                "discountPrice": 0
+            },
+            "colors": [
+                "Red", "Blue"
+            ],
+            "sizes": [
+                "Small", "Medium", "Large"
+            ],
+            "stock": true,
+            "tags": [
+                "Classic", "Casual", "Womens", "Summer"
+            ],
+            "short": "Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.",
+            "description": {
+                "heading": "Nunc egestas posuere enim, eu maximus erat posuere eget",
+                "body": "Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis. Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus. Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. Quisque a convallis diam commodo eget diam id, eleifend dictum libero. Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque."
+            },
+            "video": {
+                "hasVideo": true,
+                "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
+            },
+            "images": [
+                "@/assets/images/products/item5.png"
+            ]
+        },
+        {
+            "id": 245912,
+            "name": "Ave Dotted T-shirt",
+            "gender": "womens",
+            "style": "casual",
+            "category": "t-shirts",
+            "price": 34.79,
+            "discount": {
+                "isDiscounted": false,
+                "discountPrice": 0
+            },
+            "colors": [
+                "Black"
+            ],
+            "sizes": [
+                "Small", "Medium", "Large"
+            ],
+            "stock": true,
+            "tags": [
+                "Classic", "Casual", "Womens", "Summer"
+            ],
+            "short": "Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.",
+            "description": {
+                "heading": "Nunc egestas posuere enim, eu maximus erat posuere eget",
+                "body": "Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis. Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus. Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. Quisque a convallis diam commodo eget diam id, eleifend dictum libero. Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque."
+            },
+            "video": {
+                "hasVideo": true,
+                "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
+            },
+            "images": [
+                "@/assets/images/products/item6.png"
+            ]
+        }
+    ],
     "contents": [{}],
     "reviews": [{}]
 }
