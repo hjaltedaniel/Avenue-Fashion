@@ -14,13 +14,17 @@ export default {
   props: ["id"],
   data() {
     return {
-      product: {}
+      product: {},
+      category: {}
     };
   },
   created() {
     ApiService.getProduct(this.id)
       .then(response => {
         this.product = response.data;
+        ApiService.getCategory(this.product.category).then(response => {
+          this.product.category = response.data.name;
+        });
       })
       .catch(error => {
         console.log(error.response);
