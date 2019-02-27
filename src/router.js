@@ -2,8 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from './views/HomePage.vue'
 import ProductPage from './views/ProductPage.vue'
-import GenderCollection from './views/GenderCollection.vue'
-import CategoryCollection from './views/CategoryCollection.vue'
+import GenderCollection from './views/Collections/GenderCollection.vue'
+import CategoryCollection from './views/Collections/CategoryCollection.vue'
+import StyleCollection from './views/Collections/StyleCollection.vue'
 import ContentPage from './views/ContentPage.vue'
 import UserPage from './views/UserPage.vue'
 
@@ -27,6 +28,12 @@ export default new Router({
       path: '/gender/:gender',
       name: 'gender',
       component: GenderCollection,
+      props: true
+    },
+    {
+      path: '/style/:style',
+      name: 'style',
+      component: StyleCollection,
       props: true
     },
     {
