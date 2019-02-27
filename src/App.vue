@@ -66,7 +66,7 @@ input[type="reset"] {
 }
 
 //Adding states
-.is-active {
+.active {
   visibility: visible !important;
 }
 </style>
