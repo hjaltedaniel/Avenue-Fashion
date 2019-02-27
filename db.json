@@ -204,6 +204,68 @@
             ]
         }
     ],
+    "productCategories": [{
+            "name": "Jackets",
+            "id": "1",
+            "style": "casual",
+            "gender": "mens"
+        },
+        {
+            "name": "Hoodies & Sweatshirts",
+            "id": "2",
+            "style": "casual",
+            "gender": "mens"
+        },
+        {
+            "name": "Polo Shirts",
+            "id": "3",
+            "style": "casual",
+            "gender": "mens"
+        },
+        {
+            "name": "Sportswear",
+            "id": "4",
+            "style": "casual",
+            "gender": "mens"
+        },
+        {
+            "name": "Trousers & Chinos",
+            "id": "5",
+            "style": "casual",
+            "gender": "mens"
+        },
+        {
+            "name": "T-shirts",
+            "id": "6",
+            "style": "casual",
+            "gender": "mens"
+        },
+        {
+            "name": "Jackets",
+            "id": "7",
+            "style": "formal",
+            "gender": "mens"
+        },
+        {
+            "name": "Shirts",
+            "id": "8",
+            "style": "formal",
+            "gender": "mens"
+        },
+        {
+            "name": "Suits",
+            "id": "9",
+            "style": "formal",
+            "gender": "mens"
+        },
+        {
+            "name": "Trousers",
+            "id": "10",
+            "style": "formal",
+            "gender": "mens"
+        }
+    ],
     "contents": [{}],
     "reviews": [{}]
+
 }
