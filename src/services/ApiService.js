@@ -19,10 +19,19 @@ export default {
   getCategoryProducts(gender, style, category) {
     return apiClient.get('/products?gender=' + gender + "&style=" + style + "&category=" + category)
   },
+  getStyleProducts(gender, style) {
+    return apiClient.get('/products?gender=' + gender + "&style=" + style)
+  },
   getCategories(gender) {
-    return apiClient.get('/productCategories?gender=' + gender)
+    return apiClient.get('/categories?gender=' + gender)
+  },
+  getCategory(id) {
+    return apiClient.get('/categories/' + id)
   },
   getProduct(id) {
     return apiClient.get('/products/' + id)
+  },
+  getContent(id) {
+    return apiClient.get('/content/' + id)
   }
 }
