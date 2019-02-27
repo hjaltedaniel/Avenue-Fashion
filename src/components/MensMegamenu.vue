@@ -39,8 +39,6 @@ export default {
         });
         let x = [...new Set(y)];
         this.styles = x;
-        console.log(this.categories);
-        console.log(this.styles);
       })
       .catch(error => {
         console.log("There was an error:" + error.response);
