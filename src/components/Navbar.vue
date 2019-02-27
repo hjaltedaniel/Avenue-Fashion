@@ -11,109 +11,8 @@
       </div>
       <nav class="navigation-container__main-menu">
         <ul class="main-menu">
-          <li class="main-menu__mega-dropdown">
-            <router-link :to="{ name: 'product', params: { id: '1' } }">Mens
-              <br>
-              <i class="fas fa-angle-down"></i>
-            </router-link>
-            <ul class="mega-dropdown">
-              <li class="mega-dropdown__category">
-                <a href="#">Casual</a>
-                <ul>
-                  <a href="#">
-                    <li>Jackets</li>
-                  </a>
-                  <a href="#">
-                    <li>Hoodies & Sweatshirts</li>
-                  </a>
-                  <a href="#">
-                    <li>Polo Shirts</li>
-                  </a>
-                  <a href="#">
-                    <li>Sportswear</li>
-                  </a>
-                  <a href="#">
-                    <li>Trousers & Chinos</li>
-                  </a>
-                  <a href="#">
-                    <li>T-shirts</li>
-                  </a>
-                </ul>
-              </li>
-              <li class="mega-dropdown__category">
-                <a href="#">Formal</a>
-                <ul>
-                  <a href="#">
-                    <li>Jackets</li>
-                  </a>
-                  <a href="#">
-                    <li>Shirts</li>
-                  </a>
-                  <a href="#">
-                    <li>Suits</li>
-                  </a>
-                  <a href="#">
-                    <li>Trousers</li>
-                  </a>
-                </ul>
-              </li>
-              <div class="mega-dropdown__banner">
-                <div>
-                  <span class="bold">Autumn sale!</span>
-                  <br>
-                  <span>Up to 50% off</span>
-                </div>
-              </div>
-            </ul>
-          </li>
-          <li class="main-menu__mega-dropdown">
-            <a href="#">Womens
-              <br>
-              <i class="fas fa-angle-down"></i>
-            </a>
-            <ul class="mega-dropdown">
-              <li class="mega-dropdown__category">
-                <a href="#">Casual</a>
-                <ul>
-                  <a href="#">
-                    <li>Jackets</li>
-                  </a>
-                  <a href="#">
-                    <li>Hoodies & Sweatshirts</li>
-                  </a>
-                  <a href="#">
-                    <li>Polo Shirts</li>
-                  </a>
-                  <a href="#">
-                    <li>Sportswear</li>
-                  </a>
-                  <a href="#">
-                    <li>Trousers & Chinos</li>
-                  </a>
-                  <a href="#">
-                    <li>T-shirts</li>
-                  </a>
-                </ul>
-              </li>
-              <li class="mega-dropdown__category">
-                <a href="#">Formal</a>
-                <ul>
-                  <a href="#">
-                    <li>Skirts</li>
-                  </a>
-                  <a href="#">
-                    <li>Shirts</li>
-                  </a>
-                  <a href="#">
-                    <li>Suits</li>
-                  </a>
-                  <a href="#">
-                    <li>Trousers</li>
-                  </a>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          <MensMegamenu/>
+          <WomensMegamenu/>
           <li>
             <router-link :to="{ name: 'content', params: { id: '2' } }">The Brand</router-link>
           </li>
@@ -140,7 +39,15 @@
 </template>
 
 <script>
-export default {};
+import WomensMegamenu from "@/components/WomensMegamenu.vue";
+import MensMegamenu from "@/components/MensMegamenu.vue";
+
+export default {
+  components: {
+    WomensMegamenu,
+    MensMegamenu
+  }
+};
 </script>
 
 <style lang="scss">
