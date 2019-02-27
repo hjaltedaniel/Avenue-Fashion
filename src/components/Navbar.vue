@@ -14,7 +14,7 @@
           <MensMegamenu/>
           <WomensMegamenu/>
           <li>
-            <router-link :to="{ name: 'content', params: { id: '2' } }">The Brand</router-link>
+            <router-link :to="{ name: 'content', params: { id: '1' } }">The Brand</router-link>
           </li>
           <li class="main-menu__dropdown-child">
             <a href="#">Local Stores
