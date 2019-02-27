@@ -7,7 +7,7 @@
     <ul class="mega-dropdown" v-bind:class="{ active: active }">
       <li class="mega-dropdown__category" v-for="style in styles" :key="style">
         <router-link :to="{ name: 'style', params: { gender: 'mens', style: style } }">{{ style }}</router-link>
-        <ul v-for="cat in categoriesByStyle(style)" :key="cat">
+        <ul v-for="cat in categoriesByStyle(style)" :key="cat.id">
           <router-link
             :to="{ name: 'category', params: { gender: 'mens', style: cat.style, category: cat.id } }"
           >
