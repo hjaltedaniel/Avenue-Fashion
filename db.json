@@ -4,7 +4,7 @@
             "name": "Ave Classic Sweatshirt",
             "gender": "mens",
             "style": "casual",
-            "category": "hoodies & sweatshirts",
+            "category": "2",
             "price": 107,
             "discount": {
                 "isDiscounted": true,
@@ -72,7 +72,7 @@
             "name": "Ave Illuminati Long-sleeved",
             "gender": "mens",
             "style": "casual",
-            "category": "t-shirts",
+            "category": "6",
             "price": 89.99,
             "discount": {
                 "isDiscounted": false,
@@ -106,7 +106,7 @@
             "name": "Ave Surfer Sweatshirt",
             "gender": "mens",
             "style": "casual",
-            "category": "hoodies & sweatshirts",
+            "category": "2",
             "price": 69.95,
             "discount": {
                 "isDiscounted": false,
