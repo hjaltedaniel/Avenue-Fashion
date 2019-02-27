@@ -21,13 +21,22 @@ export default {
     };
   },
   created() {
-    ApiService.getStyleProducts(this.gender, this.style)
-      .then(response => {
-        this.products = response.data;
-      })
-      .catch(error => {
-        console.log("There was an error:" + error.response);
-      });
+    this.fetchData();
+  },
+  watch: {
+    // call again the method if the route changes
+    $route: "fetchData"
+  },
+  methods: {
+    fetchData: function() {
+      ApiService.getStyleProducts(this.gender, this.style)
+        .then(response => {
+          this.products = response.data;
+        })
+        .catch(error => {
+          console.log("There was an error:" + error.response);
+        });
+    }
   }
 };
 </script>

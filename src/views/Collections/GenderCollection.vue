@@ -18,13 +18,22 @@ export default {
     };
   },
   created() {
-    ApiService.getGenderProducts(this.gender)
-      .then(response => {
-        this.products = response.data;
-      })
-      .catch(error => {
-        console.log("There was an error:" + error.response);
-      });
+    this.fetchData();
+  },
+  watch: {
+    // call again the method if the route changes
+    $route: "fetchData"
+  },
+  methods: {
+    fetchData: function() {
+      ApiService.getGenderProducts(this.gender)
+        .then(response => {
+          this.products = response.data;
+        })
+        .catch(error => {
+          console.log("There was an error:" + error.response);
+        });
+    }
   }
 };
 </script>

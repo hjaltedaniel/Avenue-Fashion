@@ -19,16 +19,25 @@ export default {
     };
   },
   created() {
-    ApiService.getProduct(this.id)
-      .then(response => {
-        this.product = response.data;
-        ApiService.getCategory(this.product.category).then(response => {
-          this.product.category = response.data.name;
+    this.fetchData();
+  },
+  watch: {
+    // call again the method if the route changes
+    $route: "fetchData"
+  },
+  methods: {
+    fetchData: function() {
+      ApiService.getProduct(this.id)
+        .then(response => {
+          this.product = response.data;
+          ApiService.getCategory(this.product.category).then(response => {
+            this.product.category = response.data.name;
+          });
+        })
+        .catch(error => {
+          console.log(error.response);
         });
-      })
-      .catch(error => {
-        console.log(error.response);
-      });
+    }
   }
 };
 </script>
