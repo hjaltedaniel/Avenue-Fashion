@@ -11,8 +11,8 @@
       </div>
       <nav class="navigation-container__main-menu">
         <ul class="main-menu">
-          <MensMegamenu/>
-          <WomensMegamenu/>
+          <Megamenu gender="mens" :has-banner="true"/>
+          <Megamenu gender="womens" :has-banner="false"/>
           <li>
             <router-link :to="{ name: 'content', params: { id: '1' } }">The Brand</router-link>
           </li>
@@ -39,13 +39,11 @@
 </template>
 
 <script>
-import WomensMegamenu from "@/components/WomensMegamenu.vue";
-import MensMegamenu from "@/components/MensMegamenu.vue";
+import Megamenu from "@/components/Megamenu.vue";
 
 export default {
   components: {
-    WomensMegamenu,
-    MensMegamenu
+    Megamenu
   }
 };
 </script>
