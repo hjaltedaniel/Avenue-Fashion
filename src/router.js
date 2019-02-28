@@ -31,7 +31,7 @@ export default new Router({
       props: true
     },
     {
-      path: '/style/:style',
+      path: '/style/:gender/:style',
       name: 'style',
       component: StyleCollection,
       props: true
