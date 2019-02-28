@@ -54,9 +54,6 @@ export default {
       });
   },
   methods: {
-    mouseOver: function() {
-      this.active = !this.active;
-    },
     categoriesByStyle: function(x) {
       let y = this.categories.filter(function(cat) {
         return cat.style == x;
