@@ -1,11 +1,6 @@
 <template>
-  <li
-    class="main-menu__mega-dropdown"
-    @mouseover="active = true"
-    @mouseleave="active = false"
-    v-bind:class="{ active: active }"
-  >
-    <router-link :to="{ name: 'gender', params: { gender: gender } }">
+  <li class="main-menu__mega-dropdown" @mouseover="active = true" @mouseleave="active = false">
+    <router-link :class="{ active: active }" :to="{ name: 'gender', params: { gender: gender } }">
       {{ gender }}
       <br>
       <i class="fas fa-angle-down"></i>

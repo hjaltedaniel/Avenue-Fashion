@@ -121,7 +121,7 @@ export default {
     font-size: 6pt;
   }
 
-  &__mega-dropdown a.is-active {
+  &__mega-dropdown a.active {
     color: $blue;
   }
 }
