@@ -38,7 +38,7 @@
             "name": "Ave Marilyn Monroe T-shirt",
             "gender": "womens",
             "style": "casual",
-            "category": "t-shirts",
+            "category": "15",
             "price": 47.50,
             "discount": {
                 "isDiscounted": false,
@@ -140,7 +140,7 @@
             "name": "Ave Casual T-shirt",
             "gender": "womens",
             "style": "casual",
-            "category": "t-shirts",
+            "category": "15",
             "price": 29.95,
             "discount": {
                 "isDiscounted": false,
@@ -174,7 +174,7 @@
             "name": "Ave Dotted T-shirt",
             "gender": "womens",
             "style": "casual",
-            "category": "t-shirts",
+            "category": "15",
             "price": 34.79,
             "discount": {
                 "isDiscounted": false,
@@ -263,7 +263,68 @@
             "id": "10",
             "style": "formal",
             "gender": "mens"
+        },
+        {
+            "name": "Jackets",
+            "id": "11",
+            "style": "casual",
+            "gender": "womens"
+        },
+        {
+            "name": "Jumpsuits",
+            "id": "12",
+            "style": "casual",
+            "gender": "womens"
+        },
+        {
+            "name": "Dresses",
+            "id": "13",
+            "style": "casual",
+            "gender": "womens"
+        },
+        {
+            "name": "Leggings",
+            "id": "14",
+            "style": "casual",
+            "gender": "womens"
+        },
+        {
+            "name": "T-shirts",
+            "id": "15",
+            "style": "casual",
+            "gender": "womens"
+        },
+        {
+            "name": "Sportswear",
+            "id": "16",
+            "style": "casual",
+            "gender": "womens"
+        },
+        {
+            "name": "Blazers",
+            "id": "17",
+            "style": "formal",
+            "gender": "womens"
+        },
+        {
+            "name": "Dresses",
+            "id": "18",
+            "style": "formal",
+            "gender": "womens"
+        },
+        {
+            "name": "Trousers",
+            "id": "19",
+            "style": "formal",
+            "gender": "womens"
+        },
+        {
+            "name": "Skirts",
+            "id": "20",
+            "style": "formal",
+            "gender": "womens"
         }
+
     ],
     "content": [{
         "id": 1,
@@ -292,7 +353,9 @@
             "reward-1": "reward1.png",
             "reward-2": "reward2.png",
             "reward-3": "reward3.png"
-        }
+        },
+        "hasSiblings": false,
+        "siblings": []
     }],
     "reviews": [{}]
 
