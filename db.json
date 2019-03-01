@@ -30,7 +30,7 @@
                 "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
             },
             "images": [
-                "@/assets/images/products/item3.png"
+                "item3.png"
             ]
         },
         {
@@ -64,7 +64,7 @@
                 "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
             },
             "images": [
-                "@/assets/images/products/item2.png"
+                "item2.png"
             ]
         },
         {
@@ -98,7 +98,7 @@
                 "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
             },
             "images": [
-                "@/assets/images/products/item1.png"
+                "item1.png"
             ]
         },
         {
@@ -132,7 +132,7 @@
                 "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
             },
             "images": [
-                "@/assets/images/products/item4.png"
+                "item4.png"
             ]
         },
         {
@@ -166,7 +166,7 @@
                 "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
             },
             "images": [
-                "@/assets/images/products/item5.png"
+                "item5.png"
             ]
         },
         {
@@ -200,7 +200,7 @@
                 "sourceLink": "https://www.youtube.com/watch?v=aVS4W7GZSq0"
             },
             "images": [
-                "@/assets/images/products/item6.png"
+                "item6.png"
             ]
         }
     ],
@@ -350,12 +350,8 @@
         },
         "rewards": {
             "hasRewards": true,
-            "reward-1": "reward1.png",
-            "reward-2": "reward2.png",
-            "reward-3": "reward3.png"
-        },
-        "hasSiblings": false,
-        "siblings": []
+            "rewards": ["reward1.png", "reward2.png", "reward3.png"]
+        }
     }],
     "reviews": [{}]
 
