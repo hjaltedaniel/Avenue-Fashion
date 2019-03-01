@@ -3,17 +3,23 @@
     <Topbar :inCart="inCart"/>
     <Navbar/>
     <router-view/>
+    <Footer/>
+    <Bottombar/>
   </div>
 </template>
 
 <script>
 import Topbar from "@/components/Topbar.vue";
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
+import Bottombar from "@/components/Bottombar.vue";
 
 export default {
   components: {
     Navbar,
-    Topbar
+    Topbar,
+    Footer,
+    Bottombar
   },
   computed: {
     inCart() {
