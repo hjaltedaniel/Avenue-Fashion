@@ -29,10 +29,10 @@ export default {};
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    height: 40px;
     max-width: $container-size;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     &__copyright {
       grid-column: 1/3;
