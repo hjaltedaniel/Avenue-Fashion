@@ -17,9 +17,14 @@
         </router-link>
       </div>
       <div class="top-container__cart">
-        <button>
+        <button v-if="inCart.length == 0">
           <i class="fas fa-shopping-cart"></i>
           empty
+          <i class="fas fa-angle-down"></i>
+        </button>
+        <button v-else>
+          <i class="fas fa-shopping-cart"></i>
+          {{ inCart.length }}
           <i class="fas fa-angle-down"></i>
         </button>
       </div>
@@ -28,7 +33,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["inCart"]
+};
 </script>
 
 <style scoped lang="scss">

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Topbar/>
+    <Topbar :inCart="inCart"/>
     <Navbar/>
     <router-view/>
   </div>
@@ -14,6 +14,11 @@ export default {
   components: {
     Navbar,
     Topbar
+  },
+  computed: {
+    inCart() {
+      return this.$store.getters.inCart;
+    }
   }
 };
 </script>
@@ -26,8 +31,21 @@ export default {
 
 h1 {
   font-family: $head-font;
-  font-style: regular;
   font-size: 18pt;
+}
+
+h2 {
+  font-family: $head-font;
+  font-weight: 100;
+  font-size: 15pt;
+}
+
+h3 {
+  font-family: $head-font;
+}
+
+h4 {
+  font-family: $head-font;
 }
 
 p {
@@ -40,7 +58,7 @@ a {
   color: $grey;
   text-decoration: none;
 
-  :hover {
+  &:hover {
     color: $blue;
   }
 }
