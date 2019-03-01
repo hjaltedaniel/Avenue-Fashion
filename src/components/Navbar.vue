@@ -54,6 +54,8 @@ export default {
 .main-navigation {
   background-color: $lightgrey;
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: $head-font;
   font-size: 8pt;
 
@@ -75,18 +77,21 @@ export default {
 }
 
 .navigation-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   justify-content: space-between;
   align-items: center;
-  height: 90px;
-  max-width: $container-size + 150;
+  max-width: $container-size + 500px;
   margin: auto;
 
   &__nav-bar-brand {
     text-transform: uppercase;
+    grid-column: 1/5;
   }
 
   &__main-menu {
+    grid-column: 5/11;
+
     li {
       padding-right: 50px;
       font-weight: bold;
@@ -95,6 +100,8 @@ export default {
   }
 
   &__search-field {
+    grid-column: 11/13;
+
     i {
       position: relative;
       z-index: 1;
@@ -106,6 +113,7 @@ export default {
     }
 
     input {
+      margin-top: 0px;
       width: 190px;
       padding: 7px;
     }
