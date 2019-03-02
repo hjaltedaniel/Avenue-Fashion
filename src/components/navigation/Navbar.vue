@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Megamenu from "@/components/Megamenu.vue";
+import Megamenu from "@/components/navigation/Megamenu.vue";
 
 export default {
   components: {
@@ -96,6 +96,7 @@ export default {
       padding-right: 50px;
       font-weight: bold;
       text-transform: uppercase;
+      z-index: 4;
     }
   }
 
@@ -129,7 +130,7 @@ export default {
     font-size: 6pt;
   }
 
-  &__mega-dropdown a.active {
+  &__mega-dropdown a.is-active {
     color: $blue;
   }
 }
