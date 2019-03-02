@@ -1,7 +1,7 @@
 <template>
   <div class="frontpage-grid">
     <div class="grid-container">
-      <ul class="grid-container__pagination">
+      <ul class="grid-container__pagination" v-if="frontpage">
         <a href="#">
           <li class="active">Popular</li>
         </a>
@@ -20,7 +20,7 @@
       </ul>
       <div class="grid-container__image-grid">
         <template v-for="product in products">
-          <ProductCard :product="product" :key="product.id"/>
+          <ProductCard :product="product" :frontpage="frontpage" :key="product.id"/>
         </template>
       </div>
     </div>
@@ -33,7 +33,7 @@ export default {
   components: {
     ProductCard
   },
-  props: ["products"]
+  props: ["products", "frontpage"]
 };
 </script>
 
@@ -57,7 +57,6 @@ export default {
       border-top: 0.7px solid $lightgrey;
       padding-top: 30px;
       margin-top: 30px;
-      margin-bottom: 30px;
       list-style: none;
       padding-inline-start: 0px;
       font-family: $head-font;
@@ -71,6 +70,7 @@ export default {
     }
 
     &__image-grid {
+      margin-top: 30px;
       max-width: $container-size + 400px;
       border-bottom: 0.7px solid $lightgrey;
       padding-bottom: 30px;
@@ -79,104 +79,6 @@ export default {
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 15px;
       grid-row: repeat(5, auto);
-
-      .large {
-        height: 500px !important;
-        grid-column: span 2 !important;
-        grid-row: span 3 !important;
-
-        img {
-          object-fit: scale-down !important;
-        }
-      }
-
-      .image-card.active {
-        box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.75);
-      }
-
-      .image-card {
-        height: 400px;
-        background-color: $lightgrey;
-        grid-column: span 1;
-        grid-row: span 2;
-
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
-
-        &__price {
-          position: absolute;
-          padding-top: 10px;
-          padding-left: 10px;
-
-          span {
-            font-family: $head-font;
-            color: $midgrey;
-            font-size: 12pt;
-            display: inline-block;
-
-            &::first-letter {
-              font-size: 75% !important;
-            }
-          }
-        }
-
-        &__old-price {
-          text-decoration: line-through;
-        }
-
-        .active {
-          visibility: visible;
-        }
-
-        &__misc {
-          text-align: center;
-          background-color: $white;
-          visibility: hidden;
-          position: relative;
-          top: -4px;
-          z-index: 4;
-          box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.75);
-
-          .price {
-            display: inline-block;
-            padding-left: 5px;
-
-            &::first-letter {
-              font-size: 75% !important;
-            }
-          }
-
-          span {
-            text-transform: uppercase;
-            font-family: $head-font;
-            font-weight: bold;
-            font-size: 8pt;
-            color: $midgrey;
-          }
-
-          p {
-            font-size: 8pt;
-            color: $midgrey;
-          }
-
-          .buttons {
-            button {
-              margin-bottom: 10px;
-              background-color: $midgrey;
-              padding: 5px;
-              color: $white;
-              border-radius: 100%;
-
-              &:hover {
-                background-color: $blue;
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

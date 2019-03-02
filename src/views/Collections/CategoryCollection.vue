@@ -1,20 +1,36 @@
 <template>
   <div v-if="isEmpty(products)">
-    <ul v-for="product in products" :key="product.id">
-      <router-link :to="{ name: 'product', params: { id: product.id } }">
-        <li>{{ product.name }}</li>
-      </router-link>
-    </ul>
+    <HeadSection>
+      <span slot="headline">
+        Category
+        <span class="light">View</span>
+      </span>
+      <span slot="byline">{{ cat.gender }} - {{ cat.style }} - {{ cat.name }}</span>
+    </HeadSection>
+    <ProductGrid :products="products"/>
   </div>
   <div v-else>
-    <h1>No products of category {{ cat.name }} available</h1>
+    <HeadSection>
+      <span slot="headline">
+        No products of category
+        <span class="light">{{ cat.name }}</span> available
+      </span>
+      <span slot="byline">{{ cat.gender }} - {{ cat.style }} - {{ cat.name }}</span>
+    </HeadSection>
+    <h1></h1>
   </div>
 </template>
 
 <script>
 import ApiService from "@/services/ApiService.js";
+import ProductGrid from "@/components/products/ProductGrid.vue";
+import HeadSection from "@/components/global/HeadSection.vue";
 export default {
   props: ["gender", "style", "category"],
+  components: {
+    ProductGrid,
+    HeadSection
+  },
   data() {
     return {
       products: [],

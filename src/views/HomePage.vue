@@ -1,7 +1,7 @@
 <template>
   <div>
     <Slider/>
-    <ProductGrid :products="products"/>
+    <ProductGrid :products="products" :frontpage="true"/>
     <Lookbook/>
   </div>
 </template>
