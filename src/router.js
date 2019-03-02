@@ -43,7 +43,7 @@ export default new Router({
       props: true
     },
     {
-      path: '/:id',
+      path: 'content/:id',
       name: 'content',
       component: ContentPage,
       props: true
