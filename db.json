@@ -99,7 +99,8 @@
             },
             "images": [
                 "item1.png"
-            ]
+            ],
+            "frontpageSize": "large"
         },
         {
             "id": 129034,
@@ -133,7 +134,8 @@
             },
             "images": [
                 "item4.png"
-            ]
+            ],
+            "frontpageSize": "large"
         },
         {
             "id": 937545,
