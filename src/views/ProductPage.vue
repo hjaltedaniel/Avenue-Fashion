@@ -131,56 +131,7 @@
             </button>
           </div>
         </div>
-        <div class="product-container__tabs">
-          <ul class="tabs__pagination">
-            <li class="active">
-              <a href="#">description</a>
-            </li>
-            <li>
-              <a href="#">Video</a>
-            </li>
-            <li>
-              <a href="#">Size & specs</a>
-            </li>
-            <li>
-              <a href="#">Delivery & returns</a>
-            </li>
-            <li>
-              <a href="#">Reviews</a>
-            </li>
-          </ul>
-          <div class="tabs__content">
-            <h4>Nunc egestas posuere enim, eu maximus erat posuere eget</h4>
-            <p>
-              Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis.
-              Nulla sapien magna, interdum quis pretium nec, pharetra at
-              felis. Curabitur dictum sapien est, eget ultricies turpis porta
-              vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus
-              risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet
-              pretium elit. Aliquam congue, ligula id vehicula vestibulum,
-              orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed
-              quis aliquet risus, ut cursus lectus. In eget lorem tellus.
-            </p>
-            <p>
-              Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper
-              imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis
-              urna et hendrerit sodales. Nunc molestie risus nec fringilla
-              lacinia. Nulla facilisi. Etiam neque velit, tristique eget
-              sollicitudin eget, placerat at metus. Proin dictum lobortis
-              velit, id suscipit orci faucibus ut. Aliquam erat volutpat.
-              Vivamus feugiat justo in diam placerat, id dignissim elit
-              auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi
-              suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed
-              nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit
-              augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus
-              imperdiet ultricies. Nullam pretium cursus augue auctor
-              vulputate. Quisque a convallis diam commodo eget diam id,
-              eleifend dictum libero. Etiam varius, nisi vel dignissim
-              sodales, enim dui posuere mauris, in aliquet lorem eros eget
-              neque.
-            </p>
-          </div>
-        </div>
+        <ProductTabs :product="product" :tabs="tabs"/>
       </div>
     </div>
   </div>
@@ -189,15 +140,39 @@
 <script>
 import ApiService from "@/services/ApiService.js";
 import HeadSection from "@/components/global/HeadSection.vue";
+import ProductTabs from "@/components/products/ProductTabs.vue";
 export default {
   components: {
-    HeadSection
+    HeadSection,
+    ProductTabs
   },
   props: ["id"],
   data() {
     return {
       product: {},
-      category: {}
+      category: {},
+      tabs: [
+        {
+          name: "Description",
+          active: true
+        },
+        {
+          name: "Video",
+          active: false
+        },
+        {
+          name: "Size & specs",
+          active: false
+        },
+        {
+          name: "Delivery & returns",
+          active: false
+        },
+        {
+          name: "Reviews",
+          active: false
+        }
+      ]
     };
   },
   created() {
@@ -454,56 +429,6 @@ export default {
             margin: auto 10px;
             color: $white;
           }
-        }
-      }
-    }
-  }
-
-  &__tabs {
-    grid-column: 1/13;
-
-    .tabs {
-      &__pagination {
-        list-style: none;
-        display: flex;
-        padding-inline-start: 0px;
-        background-color: $lightgrey;
-
-        .active {
-          background-color: $grey;
-
-          a {
-            color: $white;
-          }
-        }
-
-        li {
-          padding: 15px 50px;
-          color: $grey;
-          font-family: $head-font;
-          font-size: 10pt;
-          font-weight: bold;
-          text-transform: uppercase;
-
-          &:hover {
-            background-color: $grey;
-
-            a {
-              color: $white;
-            }
-          }
-        }
-      }
-
-      &__content {
-        h4 {
-          font-size: 10pt;
-          line-height: 1.6;
-        }
-
-        p {
-          font-size: 10pt;
-          line-height: 1.6;
         }
       }
     }
