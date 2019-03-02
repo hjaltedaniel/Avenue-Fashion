@@ -44,7 +44,7 @@
 
 <script>
 import ApiService from "@/services/ApiService.js";
-import HeadSection from "@/components/HeadSection.vue";
+import HeadSection from "@/components/global/HeadSection.vue";
 export default {
   props: ["id"],
   components: {
