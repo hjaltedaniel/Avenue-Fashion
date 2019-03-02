@@ -54,10 +54,9 @@ export default {};
 
     &__button {
       margin-left: 750px;
-      z-index: 10;
+      z-index: 3;
 
       button {
-        color: $grey;
         font-family: $head-font;
         font-weight: 600;
         font-size: 11pt;
@@ -67,6 +66,13 @@ export default {};
         padding-left: 20px;
         padding-right: 20px;
         height: 50px;
+        a {
+          color: $grey;
+          padding: 20px;
+          &:hover {
+            color: $white;
+          }
+        }
 
         &:hover {
           background-color: $grey;

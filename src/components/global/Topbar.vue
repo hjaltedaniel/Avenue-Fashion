@@ -79,7 +79,10 @@ export default {
     justify-self: center;
 
     :hover {
-      color: lighten($midgrey, 10);
+      color: $blue;
+    }
+    a {
+      color: $midgrey;
     }
   }
 
