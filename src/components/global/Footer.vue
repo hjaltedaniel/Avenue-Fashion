@@ -226,4 +226,43 @@ footer {
     }
   }
 }
+@media (max-width: 768px) {
+  footer {
+    .footer-container {
+      margin-right: 20px;
+      margin-left: 20px;
+      &__navigation {
+        .navigation__navigation-list {
+          grid-column: 1/16;
+
+          .navigation-list {
+            &__headline {
+              padding-top: 20px;
+              grid-column: span 6;
+            }
+
+            &__submenu {
+              grid-column: span 6;
+            }
+          }
+        }
+
+        .navigation__contact {
+          grid-column: 1/16;
+          margin-top: 12px;
+        }
+      }
+
+      &__banner {
+        grid-column: span 12;
+        height: 200px;
+        background-color: $grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
 </style>

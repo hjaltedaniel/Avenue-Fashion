@@ -17,7 +17,7 @@
         <iframe
           id="ytplayer"
           type="text/html"
-          width="640"
+          width="100%"
           height="360"
           :src="'https://www.youtube.com/embed/' + videoId"
           frameborder="0"
@@ -86,7 +86,8 @@ export default {
     .tabs {
       &__pagination {
         list-style: none;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
         padding-inline-start: 0px;
         background-color: $lightgrey;
         cursor: pointer;
@@ -120,6 +121,51 @@ export default {
         p {
           font-size: 10pt;
           line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .product-container {
+    &__tabs {
+      .tabs {
+        &__pagination {
+          li {
+            text-align: center;
+            padding: 15px 30px;
+            font-size: 10pt;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .product-container {
+    &__tabs {
+      .tabs {
+        &__pagination {
+          li {
+            padding: 15px 10px;
+            font-size: 10pt;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .product-container {
+    &__tabs {
+      .tabs {
+        &__pagination {
+          grid-template-columns: repeat(6, auto);
+          li {
+            padding: 15px 10px;
+            font-size: 10pt;
+            grid-column: span 2;
+          }
         }
       }
     }

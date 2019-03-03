@@ -82,4 +82,45 @@ export default {
     }
   }
 }
+@media (max-width: 992px) {
+  .frontpage-grid {
+    .grid-container {
+      &__pagination {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-row: auto;
+
+        li {
+          grid-column: span 1;
+          padding-right: 0px;
+        }
+      }
+
+      &__image-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        grid-row: repeat(5, auto);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .frontpage-grid {
+    .grid-container {
+      margin: 10px;
+      &__pagination {
+        grid-template-columns: repeat(6, 1fr) !important;
+        grid-gap: 10px;
+        grid-row: auto auto;
+        a {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+}
 </style>

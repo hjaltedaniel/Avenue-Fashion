@@ -45,4 +45,20 @@ export default {};
     }
   }
 }
+@media (max-width: 768px) {
+  .bottom-bar {
+    .bottom-container {
+      &__copyright {
+        grid-column: span 12;
+        text-align: center;
+      }
+
+      &__misc {
+        grid-column: span 12;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
 </style>

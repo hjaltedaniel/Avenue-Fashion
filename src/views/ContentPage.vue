@@ -134,4 +134,16 @@ export default {
     }
   }
 }
+@media (max-width: 768px) {
+  .content-section {
+    margin: 10px;
+    &__column-1 {
+      grid-column: span 12;
+    }
+
+    &__column-2 {
+      grid-column: span 12;
+    }
+  }
+}
 </style>

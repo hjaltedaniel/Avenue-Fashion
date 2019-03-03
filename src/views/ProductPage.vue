@@ -434,4 +434,85 @@ export default {
     }
   }
 }
+@media (max-width: 992px) {
+  .product-container {
+    &__info-section {
+      .info-section {
+        &__social {
+          .share {
+            i {
+              padding-right: 2px;
+              padding-left: 2px;
+            }
+          }
+        }
+
+        &__selectors {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-gap: 20px;
+
+          .selectors {
+            &__color-selector {
+              grid-column: span 6;
+            }
+
+            &__size-selector {
+              grid-column: span 6;
+            }
+
+            &__qty-selector {
+              grid-column: span 12;
+              width: 100%;
+            }
+          }
+        }
+
+        &__buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 50px;
+          margin-bottom: 10px;
+
+          button {
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    margin: 10px;
+    grid-template-columns: repeat(12, 1fr);
+
+    &__image-gallery {
+      grid-column: span 12;
+      img {
+        object-fit: scale-down;
+        height: 400px;
+      }
+    }
+
+    &__info-section {
+      grid-column: span 12;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .product-container {
+    &__info-section {
+      .info-section {
+        &__social {
+          span {
+            font-size: 9pt;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

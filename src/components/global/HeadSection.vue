@@ -17,6 +17,7 @@ export default {};
 @import "@/scss/_vars.scss";
 .header-section {
   background-image: url(~@/assets/images/template/header.png);
+  background-size: cover;
   background-position: center;
   text-transform: uppercase;
   text-align: center;
@@ -35,6 +36,12 @@ export default {};
     .active {
       color: $blue;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    height: 225px;
   }
 }
 </style>

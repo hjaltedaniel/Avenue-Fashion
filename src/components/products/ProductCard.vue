@@ -173,4 +173,61 @@ export default {
     }
   }
 }
+
+@media (max-width: 992px) {
+  .frontpage-grid {
+    .grid-container {
+      &__image-grid {
+        .large {
+          height: 400px !important;
+          grid-column: span 1 !important;
+          grid-row: span 2 !important;
+
+          img {
+            object-fit: cover !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .frontpage-grid {
+    .grid-container {
+      &__image-grid {
+        .large {
+          height: 400px !important;
+          grid-column: span 1 !important;
+          grid-row: span 2 !important;
+
+          img {
+            object-fit: cover !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .frontpage-grid {
+    .grid-container {
+      &__image-grid {
+        .large {
+          grid-column: span 3 !important;
+          img {
+            object-fit: scale-down !important;
+          }
+        }
+        .image-card {
+          grid-column: span 3;
+          img {
+            object-fit: scale-down !important;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

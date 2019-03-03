@@ -2,7 +2,14 @@
   <div class="registration-form">
     <h3>Register</h3>
     <form>
-      <input v-model="user.email" type="email" name="email" placeholder="Your Email...">
+      <input
+        v-model.lazy="user.email"
+        v-validate="'required|email'"
+        type="email"
+        name="email"
+        placeholder="Your Email..."
+      >
+      <span v-show="errors.has('email')">{{ errors.first('email') }}</span>
       <input
         v-validate="'required|email'"
         name="password"
@@ -10,7 +17,6 @@
         placeholder="Password"
         ref="password"
       >
-      <span v-show="errors.has('email')">{{ errors.first('email') }}</span>
       
       <input
         v-validate="'required|confirmed:password'"

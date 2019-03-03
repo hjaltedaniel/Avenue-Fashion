@@ -52,4 +52,19 @@ export default {
     grid-column: 7/13;
   }
 }
+
+@media (max-width: 768px) {
+  .content-section {
+    margin: 10px;
+    &__column-1 {
+      grid-column: span 12;
+      padding-right: 0px;
+      border-right: none;
+    }
+
+    &__column-2 {
+      grid-column: span 12;
+    }
+  }
+}
 </style>

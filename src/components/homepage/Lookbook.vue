@@ -55,21 +55,28 @@ export default {};
 <style lang="scss" scoped>
 @import "@/scss/_vars.scss";
 .frontpage-lookbook {
-  display: flex;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row: auto;
   text-align: right;
   color: $grey;
   margin-bottom: 50px;
 
   &__item {
+    grid-column: span 4;
     background-color: $lightgrey;
     height: 400px;
     margin: 10px;
     padding: 10px 10px 0px 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row: auto;
 
     h2 {
       text-transform: uppercase;
       font-size: 25pt;
+      margin-top: 10px;
       font-weight: bold;
       margin-bottom: 10px;
 
@@ -79,10 +86,10 @@ export default {};
     }
 
     div {
-      align-self: flex-start;
-      width: 55%;
+      align-self: center;
       margin-left: 30px;
-      margin-top: 25px;
+      margin-right: 30px;
+      grid-column: span 8;
     }
 
     p {
@@ -91,9 +98,10 @@ export default {};
     }
 
     img {
-      object-fit: scale-down;
+      object-fit: cover;
       align-self: flex-end;
       height: 95%;
+      grid-column: span 4;
     }
 
     button {
@@ -112,6 +120,67 @@ export default {};
         color: $white;
         background-color: $blue;
         border: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .frontpage-lookbook {
+    &__item {
+      height: 350px;
+      h2 {
+        font-size: 20pt;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .frontpage-lookbook {
+    &__item {
+      grid-column: span 12;
+      height: 400px;
+
+      h2 {
+        font-size: 25pt;
+      }
+
+      div {
+        align-self: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 25px;
+        grid-column: span 8;
+      }
+
+      img {
+        grid-column: span 4;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .frontpage-lookbook {
+    &__item {
+      grid-column: span 12;
+      height: 400px;
+
+      h2 {
+        font-size: 25pt;
+      }
+
+      div {
+        align-self: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 25px;
+        grid-column: span 8;
+      }
+
+      img {
+        grid-column: span 4;
       }
     }
   }
