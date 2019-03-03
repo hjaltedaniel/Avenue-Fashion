@@ -94,7 +94,7 @@
           <div class="info-section__selectors">
             <div class="selectors__color-selector">
               <label for="color">Colour</label>
-              <select name="color">
+              <select name="color" v-model="cartProduct.color">
                 <option selected disabled>Select Colour</option>
                 <template v-for="color in product.colors">
                   <option :key="color">{{ color }}</option>
@@ -104,7 +104,7 @@
             </div>
             <div class="selectors__size-selector">
               <label for="size">Size</label>
-              <select name="size">
+              <select v-model="cartProduct.size" name="size">
                 <option selected disabled>Select Size</option>
                 <template v-for="size in product.sizes">
                   <option :key="size">{{ size }}</option>
@@ -114,11 +114,11 @@
             </div>
             <div class="selectors__qty-selector">
               <label for="qty">Qty</label>
-              <input type="number" min="0" name="qty" step="1">
+              <input v-model="cartProduct.qty" type="number" value="1" min="1" name="qty" step="1">
             </div>
           </div>
           <div class="info-section__buttons">
-            <button @click="addToCart(product)">
+            <button @click="addToCart(cartProduct)">
               <i class="fas fa-shopping-cart"></i>Add to cart
             </button>
             <button>
@@ -151,6 +151,12 @@ export default {
     return {
       product: {},
       category: {},
+      cartProduct: {
+        productId: "",
+        size: "",
+        qty: "",
+        color: ""
+      },
       tabs: [
         {
           name: "Description",
@@ -187,6 +193,7 @@ export default {
       ApiService.getProduct(this.id)
         .then(response => {
           this.product = response.data;
+          this.addProductId();
           ApiService.getCategory(this.product.category).then(response => {
             this.product.category = response.data.name;
           });
@@ -194,6 +201,9 @@ export default {
         .catch(error => {
           console.log(error.response);
         });
+    },
+    addProductId: function() {
+      this.cartProduct.productId = this.product.id;
     },
     addToCart: function(prod) {
       this.$store.dispatch("addToCart", prod);
