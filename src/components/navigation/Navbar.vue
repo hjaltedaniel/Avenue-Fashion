@@ -53,7 +53,6 @@ export default {
 //Main-nav stuff
 .main-navigation {
   background-color: $lightgrey;
-  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: $head-font;
@@ -115,7 +114,7 @@ export default {
 
     input {
       margin-top: 0px;
-      width: 190px;
+      width: 85%;
       padding: 7px;
     }
   }
@@ -172,6 +171,51 @@ export default {
 
     div {
       padding: 50px 0 50px 0;
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .navigation-container {
+    margin: 10px;
+    &__main-menu {
+      li {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navigation-container {
+    margin: 10px;
+    &__main-menu {
+      li {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-container {
+    margin: 10px;
+
+    &__nav-bar-brand {
+      grid-column: span 12;
+      margin: auto;
+    }
+
+    &__main-menu {
+      margin: auto;
+      grid-column: span 12;
+      li {
+        padding-right: 10px;
+      }
+    }
+
+    &__search-field {
+      margin: auto;
+      grid-column: span 12;
     }
   }
 }
