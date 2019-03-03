@@ -9,6 +9,18 @@ const apiClient = axios.create({
   }
 })
 
+var ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+var ID_LENGTH = 8;
+
+var generate = function () {
+  var rtn = '';
+  for (var i = 0; i < ID_LENGTH; i++) {
+    rtn += ALPHABET.charAt(Math.floor(Math.random() * ALPHABET.length));
+  }
+  return rtn;
+}
+
 export default {
   getProducts() {
     return apiClient.get("/products")
@@ -33,5 +45,13 @@ export default {
   },
   getContent(id) {
     return apiClient.get('/content/' + id)
+  },
+  postUser(user) {
+    return apiClient.post('/users', {
+      id: generate(),
+      email: user.email,
+      password: user.password,
+      newsletter: user.newsletter
+    })
   }
 }

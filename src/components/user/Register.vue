@@ -40,7 +40,7 @@
       </span>
     </form>
     <div class="registration-form__end-section">
-      <button type="submit">Create Account</button>
+      <button type="submit" @click="postData">Create Account</button>
       
       <span>
         By clicking 'Create Account', you agree to our
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import ApiService from "@/services/ApiService.js";
 export default {
   data() {
     return {
@@ -63,6 +64,23 @@ export default {
         newsletter: ""
       }
     };
+  },
+  methods: {
+    postData: function() {
+      if (this.errors.items == 0) {
+        ApiService.postUser(this.user)
+          .then(function(response) {
+            console.log(response);
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+        this.user = {};
+        this.errors.clear();
+      } else {
+        alert("You need to input data, to be registered");
+      }
+    }
   }
 };
 </script>
