@@ -8,6 +8,7 @@
         type="email"
         name="email"
         placeholder="Your email..."
+        :class="{ error : errors.has('email') }"
       >
       <span v-show="errors.has('email')">{{ errors.first('email') }}</span>
       <input
@@ -15,8 +16,10 @@
         v-validate="'required'"
         type="password"
         name="password"
+        :class="{ error : errors.has('password') }"
         placeholder="Your password"
       >
+      <span v-show="errors.has('password')">{{ errors.first('password') }}</span>
     </form>
     <div class="signin-form__end-section">
       <button type="submit">Sign in</button>
@@ -67,6 +70,10 @@ export default {
   form {
     display: flex;
     flex-direction: column;
+  }
+  .error {
+    border: 1px solid $red;
+    background-color: $lightred;
   }
 
   input {

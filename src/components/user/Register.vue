@@ -8,11 +8,13 @@
         type="email"
         name="email"
         placeholder="Your Email..."
+        :class="{ error : errors.has('email') }"
       >
       <span v-show="errors.has('email')">{{ errors.first('email') }}</span>
       <input
-        v-validate="'required|email'"
+        v-validate="'required'"
         name="password"
+        :class="{ error : errors.has('password_confirmation') }"
         type="password"
         placeholder="Password"
         ref="password"
@@ -22,7 +24,7 @@
         v-validate="'required|confirmed:password'"
         name="password_confirmation"
         type="password"
-        class="form-control"
+        :class="{ error : errors.has('password_confirmation') }"
         placeholder="Confirm password"
         data-vv-as="password"
         v-model="user.password"
@@ -79,6 +81,11 @@ export default {
   form {
     display: flex;
     flex-direction: column;
+  }
+
+  .error {
+    border: 1px solid $red;
+    background-color: $lightred;
   }
 
   input {
