@@ -192,7 +192,7 @@ export default {
     fetchData: function() {
       ApiService.getProduct(this.id)
         .then(response => {
-          this.product = response.data;
+          this.product = response.data[Object.keys(response.data)[0]];
           this.addProductId();
           ApiService.getCategory(this.product.category).then(response => {
             this.product.category = response.data.name;

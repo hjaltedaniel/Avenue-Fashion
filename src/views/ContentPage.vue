@@ -67,7 +67,7 @@ export default {
       this.content = [];
       ApiService.getContent(this.id)
         .then(response => {
-          this.content = response.data;
+          this.content = response.data[Object.keys(response.data)[0]];
         })
         .catch(error => {
           console.log("There was an error:" + error.response);

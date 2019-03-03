@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const apiClient = axios.create({
-  baseURL: `http://localhost:3000`,
+  baseURL: `https://avenue-fashion-530c3.firebaseio.com`,
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -23,28 +23,28 @@ var generate = function () {
 
 export default {
   getProducts() {
-    return apiClient.get("/products")
+    return apiClient.get("/products.json")
   },
   getGenderProducts(gender) {
-    return apiClient.get('/products?gender=' + gender)
+    return apiClient.get('/products.json?orderBy="gender"&equalTo="' + gender + '"')
   },
   getCategoryProducts(gender, style, category) {
-    return apiClient.get('/products?gender=' + gender + "&style=" + style + "&category=" + category)
+    return apiClient.get('/products.json?gender=' + gender + "&style=" + style + "&category=" + category)
   },
   getStyleProducts(gender, style) {
-    return apiClient.get('/products?gender=' + gender + "&style=" + style)
+    return apiClient.get('/products.json?gender=' + gender + "&style=" + style)
   },
   getCategories(gender) {
-    return apiClient.get('/categories?gender=' + gender)
+    return apiClient.get('/categories.json?orderBy="gender"&equalTo="' + gender + '"')
   },
   getCategory(id) {
-    return apiClient.get('/categories/' + id)
+    return apiClient.get('/categories.json?orderBy="id"&equalTo="' + id + '"')
   },
   getProduct(id) {
-    return apiClient.get('/products/' + id)
+    return apiClient.get('/products.json?orderBy="id"&equalTo=' + id)
   },
   getContent(id) {
-    return apiClient.get('/content/' + id)
+    return apiClient.get('/content.json?orderBy="id"&equalTo=' + id)
   },
   postUser(user) {
     return apiClient.post('/users', {

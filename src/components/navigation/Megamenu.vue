@@ -41,7 +41,7 @@ export default {
   created() {
     ApiService.getCategories(this.gender)
       .then(response => {
-        this.categories = response.data;
+        this.categories = response.data[Object.keys(response.data)[0]];
         let y = [];
         this.categories.forEach(function(element) {
           y.push(element.style);
