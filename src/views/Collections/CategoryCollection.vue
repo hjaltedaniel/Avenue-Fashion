@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import ApiService from "@/services/ApiService.js";
 import ProductGrid from "@/components/products/ProductGrid.vue";
 import HeadSection from "@/components/global/HeadSection.vue";
 export default {
@@ -32,41 +31,25 @@ export default {
     HeadSection
   },
   data() {
-    return {
-      products: [],
-      cat: {}
-    };
-  },
-  created() {
-    this.fetchData();
-  },
-  watch: {
-    // call again the method if the route changes
-    $route: "fetchData"
+    return {};
   },
   methods: {
-    fetchData: function() {
-      this.products = [];
-      ApiService.getCategoryProducts(this.gender, this.style, this.category)
-        .then(response => {
-          this.products = response.data;
-        })
-        .catch(error => {
-          console.log("There was an error:" + error.response);
-        });
-      ApiService.getCategory(this.category)
-        .then(response => {
-          this.cat = response.data;
-        })
-        .catch(error => {
-          console.log("There was an error:" + error.response);
-        });
-    },
     isEmpty: function(obj) {
       for (var key in obj) {
         if (obj.hasOwnProperty(key)) return true;
       }
       return false;
+    }
+  },
+  computed: {
+    products() {
+      return this.$store.getters.filterProductsByCategory(
+        this.gender,
+        this.category
+      );
+    },
+    cat() {
+      return this.$store.getters.getCategory(this.category);
     }
   }
 };

@@ -6,7 +6,7 @@
         <span class="light">View</span>
       </span>
       <span slot="byline">
-        {{ product.gender }} - {{ product.style }} - {{ product.category }} -
+        {{ product.gender }} - {{ product.style }} - {{ category.name }} -
         <span
           class="active"
         >{{ product.name }}</span>
@@ -138,7 +138,6 @@
 </template>
 
 <script>
-import ApiService from "@/services/ApiService.js";
 import HeadSection from "@/components/global/HeadSection.vue";
 import ProductTabs from "@/components/products/ProductTabs.vue";
 export default {
@@ -149,8 +148,6 @@ export default {
   props: ["id"],
   data() {
     return {
-      product: {},
-      category: {},
       cartProduct: {
         productId: "",
         size: "",
@@ -181,27 +178,15 @@ export default {
       ]
     };
   },
-  created() {
-    this.fetchData();
-  },
-  watch: {
-    // call again the method if the route changes
-    $route: "fetchData"
+  computed: {
+    product() {
+      return this.$store.getters.getProduct(this.id);
+    },
+    category() {
+      return this.$store.getters.getCategory(this.product.category);
+    }
   },
   methods: {
-    fetchData: function() {
-      ApiService.getProduct(this.id)
-        .then(response => {
-          this.product = response.data;
-          this.addProductId();
-          ApiService.getCategory(this.product.category).then(response => {
-            this.product.category = response.data.name;
-          });
-        })
-        .catch(error => {
-          console.log(error.response);
-        });
-    },
     addProductId: function() {
       this.cartProduct.productId = this.product.id;
     },

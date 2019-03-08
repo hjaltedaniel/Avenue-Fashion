@@ -43,7 +43,6 @@
 </template>
 
 <script>
-import ApiService from "@/services/ApiService.js";
 import HeadSection from "@/components/global/HeadSection.vue";
 export default {
   props: ["id"],
@@ -51,28 +50,14 @@ export default {
     HeadSection
   },
   data() {
-    return {
-      content: {}
-    };
+    return {};
   },
-  created() {
-    this.fetchData();
-  },
-  watch: {
-    // call again the method if the route changes
-    $route: "fetchData"
+  computed: {
+    content() {
+      return this.$store.getters.getContent(this.id);
+    }
   },
   methods: {
-    fetchData: function() {
-      this.content = [];
-      ApiService.getContent(this.id)
-        .then(response => {
-          this.content = response.data;
-        })
-        .catch(error => {
-          console.log("There was an error:" + error.response);
-        });
-    },
     isEmpty: function(obj) {
       for (var key in obj) {
         if (obj.hasOwnProperty(key)) return true;

@@ -14,7 +14,7 @@
           <Megamenu gender="mens" :has-banner="true"/>
           <Megamenu gender="womens" :has-banner="false"/>
           <li>
-            <router-link :to="{ name: 'content', params: { id: '1' } }">The Brand</router-link>
+            <router-link :to="{ name: 'content', params: { id: 1 } }">The Brand</router-link>
           </li>
           <li class="main-menu__dropdown-child">
             <a href="#">Local Stores

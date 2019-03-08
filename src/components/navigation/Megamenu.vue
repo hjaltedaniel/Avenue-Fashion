@@ -28,30 +28,25 @@
 </template>
 
 <script>
-import ApiService from "@/services/ApiService.js";
 export default {
   props: ["gender", "hasBanner"],
   data() {
     return {
-      active: false,
-      categories: [],
-      styles: []
+      active: false
     };
   },
-  created() {
-    ApiService.getCategories(this.gender)
-      .then(response => {
-        this.categories = response.data;
-        let y = [];
-        this.categories.forEach(function(element) {
-          y.push(element.style);
-        });
-        let x = [...new Set(y)];
-        this.styles = x;
-      })
-      .catch(error => {
-        console.log("There was an error:" + error.response);
+  computed: {
+    categories() {
+      return this.$store.getters.filterCategoriesByGender(this.gender);
+    },
+    styles() {
+      let y = [];
+      this.categories.forEach(function(element) {
+        y.push(element.style);
       });
+      let x = [...new Set(y)];
+      return x;
+    }
   },
   methods: {
     categoriesByStyle: function(x) {

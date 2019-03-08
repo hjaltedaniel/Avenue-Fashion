@@ -25,6 +25,11 @@ export default {
     inCart() {
       return this.$store.getters.inCart;
     }
+  },
+  created() {
+    this.$store.dispatch("getProducts");
+    this.$store.dispatch("getContents");
+    this.$store.dispatch("getCategories");
   }
 };
 </script>
